@@ -1,7 +1,6 @@
 import detector as ed
 
 import cv2
-import cv2 as cv2
 import numpy as np
 from scipy.signal import find_peaks
          
@@ -113,7 +112,7 @@ def JbZion(img_name):
 
     threshold = threshold_mod(img)
 
-    edges = ed.detect(img_name)[0]
+    edges = ed.Luminance_ed(img_name)
 
     edges_gray = cv2.cvtColor(edges, cv2.COLOR_BGR2GRAY)
 
